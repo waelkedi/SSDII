@@ -75,7 +75,6 @@ public class ControlPanel extends JPanel implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        System.out.print("ll");
 
         if (e.getSource() == fileButton){
             int returnVal = chooser.showOpenDialog(this);
