@@ -24,10 +24,14 @@ public class PaintPanel extends JPanel{
         System.out.println(tree.getX() + " " + tree.getY());
 
         Graphics2D g2 = (Graphics2D) g;
-        float ratio = Math.max(2.f * (float)tree.getX() /(float)(getWidth()),2.f * (float)tree.getY()  / (float)(getHeight()));
-        
-        g2.scale(1/ratio,1/ratio);
+
+        float ratio = Math.min((float)(getWidth()) / (2.f * (float)tree.getX()),(float)(getHeight()) / (2.f * (float)tree.getY()));
+        g2.translate((getWidth()/2 - tree.getX()*ratio),getHeight()/2 - tree.getY()*ratio);
+
+        g2.scale(ratio,ratio);
         g2.translate(tree.getX(),tree.getY());
+
+
         g2.drawRect(-tree.getX() -5,-tree.getY() - 5,2*tree.getX() +10,2*tree.getY() +10);
         BSPNode root = tree.getRoot();
         paintComponent(g2,root);
