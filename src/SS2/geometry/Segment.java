@@ -11,6 +11,7 @@ public class Segment {
     Color color;
 
     public Segment(float x1, float y1, float x2, float y2, Color color){
+
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
@@ -19,7 +20,7 @@ public class Segment {
         if(color != null)
             this.color = color;
         else
-            this.color =Color.black;
+            this.color = Color.black;
     }
 
     public float getX1() {
