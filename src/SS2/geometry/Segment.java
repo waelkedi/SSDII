@@ -1,6 +1,7 @@
 package SS2.geometry;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 /**
  * Created by dimitri on 26/01/16.
@@ -23,38 +24,45 @@ public class Segment {
             this.color = Color.black;
     }
 
+    public Segment(Point.Float p1, Point.Float p2, Color color){
+
+        this.x1 = p1.x;
+        this.y1 = p1.y;
+        this.x2 = p2.x;
+        this.y2 = p2.y;
+
+        if(color != null)
+            this.color = color;
+        else
+            this.color = Color.black;
+    }
+
     public float getX1() {
         return x1;
     }
 
-    public void setX1(int x1) {
-        this.x1 = x1;
-    }
 
     public float getX2() {
         return x2;
     }
 
-    public void setX2(int x2) {
-        this.x2 = x2;
-    }
 
     public float getY1() {
         return y1;
     }
 
-    public void setY1(int y1) {
-        this.y1 = y1;
-    }
 
     public float getY2() {
         return y2;
     }
 
-    public void setY2(int y2) {
-        this.y2 = y2;
+    public Point2D.Float getP1(){
+        return new Point.Float(x1,y1);
     }
 
+    public Point2D.Float getP2(){
+        return new Point.Float(x2,y2);
+    }
 
     public Color getColor() {
         return color;
