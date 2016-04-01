@@ -32,4 +32,26 @@ public class BSPNode {
     public BSPNode getRight(){
         return right;
     }
+
+    public int getNbrSegements() {
+
+        int nbr = 0;
+
+        if (right != null)  nbr += right.getNbrSegements();
+
+        if (left != null)   nbr += left.getNbrSegements();
+
+        return nbr + elements.size();
+    }
+
+    public int getDeep() {
+
+        int deep = 0;
+
+        if (left != null) deep = left.getDeep();
+
+        if (right != null && deep < right.getDeep()) deep = left.getDeep();
+
+        return deep + 1;
+    }
 }

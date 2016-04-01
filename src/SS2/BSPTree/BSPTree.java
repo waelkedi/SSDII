@@ -30,4 +30,11 @@ public class BSPTree {
         return y;
     }
 
+    public int getNbrSegemets(){
+        return root.getNbrSegements();
+    }
+
+    public int getDeep(){
+        return root.getDeep();
+    }
 }

@@ -79,9 +79,6 @@ public class PaintPanel extends JPanel implements MouseListener {
 
             for (Segment segment : node.getElements()) {
 
-                    System.out.println("x: " + pointOfView.getX() + " y: " + getY());
-                    System.out.println("Angle : " + Math.toDegrees(angle));
-
                     Point2D.Float point1 = new Point2D.Float(segment.getX1() - (float) pointOfView.getX(), segment.getY1() - (float) pointOfView.getY());
                     point1 = Geometry.rotation(new Point2D.Float(0.f,0.f),point1,-angle);
 

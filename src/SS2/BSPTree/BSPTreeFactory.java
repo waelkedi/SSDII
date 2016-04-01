@@ -8,7 +8,6 @@ import java.awt.*;
 import java.io.File;
 import java.util.*;
 import java.util.List;
-import java.util.logging.FileHandler;
 
 /**
  * Created by dimitri on 3/26/16.
@@ -24,6 +23,7 @@ public class BSPTreeFactory {
 
         return new BSPTree(root,parser.getXBound(),parser.getYBound());
     }
+
 
     private static BSPNode creaNode(List<Segment> list,Heuristic heuristic){
 

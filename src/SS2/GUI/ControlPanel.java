@@ -5,6 +5,8 @@ import SS2.BSPTree.BSPTreeFactory;
 import SS2.BSPTree.heuristic.Heuristic;
 import SS2.BSPTree.heuristic.InOrder;
 import SS2.BSPTree.heuristic.Ramdom;
+import SS2.BSPTree.heuristic.TellerHeuristic;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -59,7 +61,7 @@ public class ControlPanel extends JPanel implements ActionListener {
         add(label2);
 
 
-        Heuristic[] heuristics = {new InOrder(),new Ramdom()};
+        Heuristic[] heuristics = {new InOrder(),new Ramdom(),new TellerHeuristic()};
 
         comboBox = new JComboBox(heuristics);
         comboBox.setAlignmentX(Component.CENTER_ALIGNMENT);
